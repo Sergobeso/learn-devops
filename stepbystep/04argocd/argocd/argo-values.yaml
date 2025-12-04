@@ -16,7 +16,7 @@ configs:
 
   repositories:
     serg-repo:
-      url: https://github.com/BigKAA/youtube
+      url: https://github.com/Sergobeso/learn-devops
       name: serg
       type: git
 
@@ -24,7 +24,7 @@ configs:
     # -- Bcrypt hashed admin password
     ## Argo expects the password in the secret to be bcrypt hashed. You can create this hash with
     ## `htpasswd -nbBC 10 "" $ARGO_PWD | tr -d ':\n' | sed 's/$2y/$2a/'`
-    argocdServerAdminPassword: "$2a$10$L8OqGEFh3a0yxwfIha4DLuyq6GIYP119hlFM5wlSEsI.nviVAv/zq"
+    argocdServerAdminPassword: "$2a$10$OoqXCeK8E55IKLHOgHvrnuyVu2.U.JdZdAUrUM.jIWsB.PdUdSu8G%"
 
 ## Redis
 redis:
@@ -41,15 +41,6 @@ server:
       cert-manager.io/cluster-issuer: "argocd-issuer"
       nginx.ingress.kubernetes.io/ssl-redirect: "false"
     ingressClassName: "system-ingress"
-    hosts:
+    hostnames:
       - argocd.serg.local
-    paths:
-      - /
-    pathType: Prefix
-    tls:
-      - hosts:
-          - argocd.serg.local
-        secretName: argocd-tls
-
-    https: true
-
+    tls: true

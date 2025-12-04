@@ -25,7 +25,7 @@
     --cert=/etc/kubernetes/ssl/ca.crt \
     --key=/etc/kubernetes/ssl/ca.key
 
-    # kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.2.0/cert-manager.yaml
+    # kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.18.0/cert-manager.yaml
 
 Namespace cert-manager создаётся автоматически.
 
@@ -46,7 +46,7 @@ Namespace cert-manager создаётся автоматически.
 
 Ставим ingress controller. _После установки argocd этот контроллер будет добавлен в CD argo._
     
-    # kubect apply -f 01-ingress-controller.yaml
+    # kubectl apply -f 01-ingress-controller.yaml
 
 Добавляем ingress
 
@@ -80,7 +80,7 @@ Namespace cert-manager создаётся автоматически.
 
     # argocd account list --grpc-web
 
-    # argocd account update-password --account artur --grpc-web
+    # argocd account update-password --account serg --grpc-web
     *** Enter current password:        <---- admin password
     *** Enter new password:
     *** Confirm new password:
