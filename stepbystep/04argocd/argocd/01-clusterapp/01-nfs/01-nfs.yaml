@@ -95,11 +95,11 @@ spec:
             - name: PROVISIONER_NAME
               value: serg.local/nfs
             - name: NFS_SERVER
-              value: 192.168.218.170
+              value: 192.168.0.170
             - name: NFS_PATH
               value: /var/nfs-disk
       volumes:
         - name: nfs-client-root
           nfs:
-            server: 192.168.218.170
+            server: 192.168.0.170
             path: /var/nfs-disk

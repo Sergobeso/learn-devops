@@ -1,6 +1,6 @@
 # Ansible playbook для установки тестового кластера k8s
 
-Плейбук проверяется на наборе [приложений](https://github.com/BigKAA/youtube/tree/master/1.31).
+Плейбук проверяется на наборе [приложений](https://github.com/Sergobeso/learn-devops/tree/master/1.31).
 
 | k8s ver         | Distributive    | CRI             | Notes           |
 |-----------------|-----------------|-----------------|-----------------|
@@ -121,7 +121,7 @@ ansible-playbook upgrade.yaml
 
 ## Utils playbook
 
-Playbook с утилитами. [Обычный набор утилит](https://github.com/BigKAA/youtube/tree/master/1.31), который я ставлю в тестовых кластерах. Раньше ставил руками. Надоело, решил автоматизировать.
+Playbook с утилитами. [Обычный набор утилит](https://github.com/Sergobeso/learn-devops/tree/master/1.31), который я ставлю в тестовых кластерах. Раньше ставил руками. Надоело, решил автоматизировать.
 
 ```shell
 ansible-playbook services/06-utils.yaml
