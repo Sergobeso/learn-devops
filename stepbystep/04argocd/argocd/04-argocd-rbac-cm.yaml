@@ -10,7 +10,7 @@ metadata:
 data:
   # See https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/rbac.md for additional information.
   policy.csv: |
-    g, artur, role:admin
+    g, serg, role:admin
 
   policy.default: role:readonly
 

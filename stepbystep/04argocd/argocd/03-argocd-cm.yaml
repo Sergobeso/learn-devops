@@ -9,9 +9,9 @@ metadata:
 data:
   url: https://argocd.serg.local:31443
 
-  accounts.artur: apiKey, login
-  accounts.artur.enabled: "true"
+  accounts.serg: apiKey, login
+  accounts.serg.enabled: "true"
 
   repositories: |
     - type: git
-      url: https://github.com/BigKAA/youtube
+      url: https://github.com/Sergobeso/learn-devops
