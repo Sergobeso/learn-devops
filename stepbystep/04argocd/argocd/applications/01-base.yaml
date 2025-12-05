@@ -9,8 +9,8 @@ spec:
   project: system-utils
   source:
     repoURL: 'https://github.com/Sergobeso/learn-devops'
-    path: argocd/01-clusterapp/01-base
-    targetRevision: master
+    path: stepbystep/04argocd/argocd/01-clusterapp/01-base
+    targetRevision: main
   destination:
     server: 'https://kubernetes.default.svc'
   syncPolicy: { }

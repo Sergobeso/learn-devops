@@ -13,8 +13,8 @@ spec:
   project: system-utils
   source:
     repoURL: 'https://github.com/Sergobeso/learn-devops'
-    path: argocd/01-clusterapp/04-monitoring-ns
-    targetRevision: master
+    path: stepbystep/04argocd/argocd/01-clusterapp/04-monitoring-ns
+    targetRevision: main
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring

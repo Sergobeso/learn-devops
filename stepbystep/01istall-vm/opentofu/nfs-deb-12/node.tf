@@ -6,23 +6,8 @@ variable "node_vms" {
   }))
   default = [
     {
-      name      = "kubeadm-node-01"
-      address   = "192.168.0.61/24"
-      node_name = "pve"
-    },
-    {
-      name      = "kubeadm-node-02"
-      address   = "192.168.0.62/24"
-      node_name = "pve"
-    },
-    {
-      name      = "kubeadm-node-03"
-      address   = "192.168.0.63/24"
-      node_name = "pve"
-    },
-    {
-      name      = "kubeadm-node-04"
-      address   = "192.168.0.64/24"
+      name      = "nfs"
+      address   = "192.168.0.170/24"
       node_name = "pve"
     }
   ]
@@ -36,7 +21,7 @@ resource "proxmox_virtual_environment_vm" "node" {
   migrate = true
   # protection  = true
   description = "Managed by OpenTofu"
-  tags        = ["kubeadm", "kubernetes", "deb-12"]
+  tags        = ["nfs", "deb-12"]
   on_boot     = true
   node_name   = each.value.node_name
 
